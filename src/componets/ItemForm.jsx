@@ -43,7 +43,11 @@ function ItemForm({
 
       <div className="form-group">
         <label>Danh mục</label>
-        <select name="category_id" value={form.category_id} onChange={handleChange}>
+        <select
+          name="category_id"
+          value={form.category_id}
+          onChange={handleChange}
+        >
           <option value="">-- Chọn danh mục --</option>
           {categoriesForm.map((item) => (
             <option key={item.id} value={item.id}>
@@ -64,17 +68,17 @@ function ItemForm({
         />
       </div>
 
-      <div className="form-group">
-        <label>Ảnh sản phẩm</label>
-        <input
-          type="text"
-          name="image"
-          placeholder="Link ảnh sản phẩm"
-          value={form.image}
-          onChange={handleChange}
-        />
-      </div>
-
+      
+      <input
+        type="file"
+        accept="image/*"
+        onChange={(e) =>
+          setForm((prev) => ({
+            ...prev,
+            image: e.target.files[0],
+          }))
+        }
+      />
       <div className="form-group">
         <label>Mô tả</label>
         <textarea

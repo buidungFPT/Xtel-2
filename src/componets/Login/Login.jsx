@@ -46,6 +46,12 @@ function Login() {
         return;
       }
 
+      if (!data.token || !data.user) {
+        alert("Backend chưa trả về token hoặc user");
+        console.log("Login response:", data);
+        return;
+      }
+
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
@@ -54,7 +60,7 @@ function Login() {
       if (data.user?.role === "admin") {
         window.location.href = "/admin";
       } else {
-        window.location.href = "/";
+        window.location.href = "/user";
       }
     } catch (error) {
       console.error("Login error:", error);
@@ -65,38 +71,38 @@ function Login() {
   };
 
   return (
-  <div className="auth-page">
-    <form className="auth-form" onSubmit={handleLogin}>
-      <h2>Đăng nhập</h2>
+    <div className="auth-page">
+      <form className="auth-form" onSubmit={handleLogin}>
+        <h2>Đăng nhập</h2>
 
-      <p>Chào mừng quay trở lại ChunChun Coffee ☕</p>
+        <p>Chào mừng quay trở lại ChunChun Coffee ☕</p>
 
-      <input
-        name="email"
-        type="email"
-        placeholder="Nhập email"
-        value={form.email}
-        onChange={handleChange}
-      />
+        <input
+          name="email"
+          type="email"
+          placeholder="Nhập email"
+          value={form.email}
+          onChange={handleChange}
+        />
 
-      <input
-        name="password"
-        type="password"
-        placeholder="Nhập mật khẩu"
-        value={form.password}
-        onChange={handleChange}
-      />
+        <input
+          name="password"
+          type="password"
+          placeholder="Nhập mật khẩu"
+          value={form.password}
+          onChange={handleChange}
+        />
 
-      <button type="submit" disabled={loading}>
-        {loading ? "Đang đăng nhập..." : "Đăng nhập"}
-      </button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Đang đăng nhập..." : "Đăng nhập"}
+        </button>
 
-      <div className="auth-extra">
-        Chưa có tài khoản? <a href="/register">Đăng ký ngay</a>
-      </div>
-    </form>
-  </div>
-);
+        <div className="auth-extra">
+          Chưa có tài khoản? <a href="/register">Đăng ký ngay</a>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default Login;

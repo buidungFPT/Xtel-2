@@ -1,0 +1,82 @@
+  /* ========================================
+     MyOrder
+  ======================================== */
+ .my-orders-page {
+  min-height: 100vh;
+  padding: 90px 20px;
+  background:
+    linear-gradient(rgba(35, 20, 12, 0.75), rgba(35, 20, 12, 0.85)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085");
+  background-size: cover;
+  background-position: center;
+}
+
+.my-orders-page h2 {
+  text-align: center;
+  color: #f8d49a;
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+.my-order-card {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  padding: 28px;
+  background: rgba(255, 248, 238, 0.96);
+  border-radius: 22px;
+  border: 1px solid #e7c9a8;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+
+.my-order-card h3 {
+  font-size: 24px;
+  color: #5b2d14;
+  margin-bottom: 16px;
+}
+
+.my-order-card p {
+  font-size: 16px;
+  color: #2d1b10;
+  margin: 8px 0;
+}
+
+.my-order-card h4 {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e3c3a0;
+  color: #8b4513;
+  font-size: 20px;
+}
+
+.my-orders-page .empty,
+.my-orders-page > p {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 22px;
+  text-align: center;
+  background: rgba(255, 248, 238, 0.95);
+  border-radius: 18px;
+  color: #5b2d14;
+  font-weight: 700;
+}
+.my-order-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.back-home-btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8b4513, #c57b39);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.back-home-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #6e3410, #b86a2d);
+}

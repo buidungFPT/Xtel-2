@@ -1,0 +1,276 @@
+/* ===============================
+   USER PAGE LAYOUT
+================================ */
+.user-site {
+  min-height: 100vh;
+  background: #fff8ef;
+}
+
+/* ===== USER HEADER ===== */
+.coffee-header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 7%;
+  background: #3b2417;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.coffee-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #f6c56b;
+}
+
+.coffee-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.coffee-nav a {
+  font-size: 15px;
+  color: #fff5e8;
+  transition: 0.25s;
+}
+
+.coffee-nav a:hover {
+  color: #f6c56b;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 80px 7%;
+  background: linear-gradient(rgba(45, 25, 15, 0.76), rgba(45, 25, 15, 0.76)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-subtitle,
+.section-label {
+  color: #f6c56b;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.btn-primary,
+.btn-secondary,
+.form-btn,
+.btn-cart {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.btn-primary,
+.form-btn,
+.btn-cart {
+  background: #b46a2b;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid #f6c56b;
+  color: #f6c56b;
+}
+
+.btn-primary:hover,
+.form-btn:hover,
+.btn-cart:hover {
+  background: #8f4f1f;
+}
+
+/* ===== USER SECTION ===== */
+.section {
+  padding: 70px 7%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.section-title h2,
+.about-content h2,
+.deals-section h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #3b2417;
+}
+
+.section-title p,
+.about-content p,
+.deals-section p {
+  color: #6d5a4c;
+  line-height: 1.7;
+}
+
+.category-section {
+  background: #fff;
+}
+
+.category-tabs,
+.menu-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.menu-tools {
+  margin-bottom: 30px;
+}
+
+.user-menu-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+
+/* ===== ABOUT / DEALS / REVIEW / CONTACT / FOOTER ===== */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+  align-items: center;
+  background: #fff;
+}
+
+.about-image {
+  min-height: 360px;
+  border-radius: 24px;
+  background: url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80") center/cover;
+}
+
+.deals-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #3b2417;
+  color: #fff;
+}
+
+.deals-section h2,
+.deals-section p {
+  color: #fff;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.review-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(70, 41, 20, 0.08);
+}
+
+.stars {
+  color: #d99021;
+  margin: 10px 0;
+}
+
+.booking-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.booking-form textarea,
+.booking-form button {
+  grid-column: span 2;
+}
+
+.coffee-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  padding: 45px 7%;
+  background: #2a160d;
+  color: #fff3e4;
+}
+
+.coffee-footer h2,
+.coffee-footer h3 {
+  color: #f6c56b;
+  margin-bottom: 12px;
+}
+
+.coffee-footer p {
+  line-height: 1.7;
+}
+
+/* ===============================
+   FORM / FILTER COMMON
+================================ */
+.search-input,
+.filter-select,
+
+.category-form input,
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dcc8b4;
+  border-radius: 10px;
+  background: #fff;
+  color: #2f2118;
+  outline: none;
+}
+
+.search-input:focus,
+.filter-select:focus,
+
+.category-form input:focus,
+.booking-form input:focus,
+.booking-form textarea:focus {
+  border-color: #b46a2b;
+  box-shadow: 0 0 0 3px rgba(180, 106, 43, 0.12);
+}
+
+.search-input {
+  max-width: 320px;
+}
+
+.filter-select {
+  max-width: 220px;
+}

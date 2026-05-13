@@ -22,8 +22,8 @@ function CategoryManage() {
   return (
     <section className="admin-page">
       <div className="admin-section-title">
-        <h1>Quản lý danh mục</h1>
-        <p>Thêm, sửa, xóa danh mục sản phẩm.</p>
+        <h1  style={{color:"red"}}>Quản lý danh mục</h1>
+        <p style={{marginBottom:"50px"}}>Thêm, sửa, xóa danh mục sản phẩm.</p>
       </div>
 
       <div className="admin-management single-column">

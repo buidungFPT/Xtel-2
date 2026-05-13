@@ -13,11 +13,32 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+
+            // USER
+            $table->foreignId('user_id')
+                ->nullable()
+                ->constrained('users')
+                ->onDelete('cascade');
+
+            // CUSTOMER INFO
             $table->string('customer_name');
+
             $table->string('phone');
+
             $table->string('address');
-            $table->decimal('total_price', 15, 2);
-            $table->enum('status', ['pending', 'processing', 'completed', 'cancelled','shipping'])->default('pending');
+
+            // MONEY
+            $table->decimal('total_price', 12, 2)->default(0);
+
+            // STATUS
+            $table->enum('status', [
+                'pending',
+                'processing',
+                'shipping',
+                'completed',
+                'cancelled'
+            ])->default('pending');
+
             $table->timestamps();
         });
     }

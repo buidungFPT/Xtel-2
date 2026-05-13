@@ -60,7 +60,7 @@ function CategoryForm({ categoriesForm, fetchData }) {
 
   return (
     <div className="category-box">
-      <h2>Quản lý danh mục</h2>
+   
 
       <form onSubmit={handleSubmitCategory} className="category-form">
         <input
@@ -70,7 +70,7 @@ function CategoryForm({ categoriesForm, fetchData }) {
           onChange={(e) => setCategoryName(e.target.value)}
         />
 
-        <button type="submit" className="form-btn">
+        <button type="submit" className="form-btn" style={{marginTop:"50px" , marginBottom:"50px"}}>
           {editCategoryId !== null ? "Cập nhật" : "Thêm"}
         </button>
 

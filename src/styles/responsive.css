@@ -1,0 +1,55 @@
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100px;
+  }
+
+  .admin-main {
+    margin-left: 100px;
+  }
+
+  .dashboard-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-products-panel .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-manage-page .admin-filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-manage-page .admin-filter-section .search-input,
+  .product-manage-page .admin-filter-section .filter-select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .admin-products-panel .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

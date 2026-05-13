@@ -12,6 +12,7 @@ import Setting from "./page/admin/Setting";
 import AdminLayout from "./layout/AdminLayouts";
 import Login from "./componets/Login/Login";
 import Register from "./componets/Login/Register";
+import MyOrders from "./page/user/MyOrders";
 import "./App.css";
 
 function AdminProtectedRoute({ children }) {
@@ -40,7 +41,7 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<Register />} />
-
+   <Route path="/my-orders" element={<MyOrders />} />
         <Route
           path="/admin"
           element={

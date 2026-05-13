@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import ItemForm from "../../componets/Itemfrom";
+import ItemForm from "../../componets/ItemForm";
 import ProductItem from "../../componets/ProductItem";
 import Category from "../../componets/Category/category";
 import Search from "../../componets/search";

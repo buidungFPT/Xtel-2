@@ -33,7 +33,7 @@ function OrderManage() {
     <section className="admin-page">
       <div className="admin-section-title">
         
-        <p>Theo dõi và cập nhật trạng thái đơn hàng.</p>
+       
       </div>
 
       {loading ? (

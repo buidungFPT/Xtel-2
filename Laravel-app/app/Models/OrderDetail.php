@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class OrderDetail extends Model
@@ -13,16 +12,15 @@ class OrderDetail extends Model
         'quantity',
         'price',
         'total_price',
-    ]
+    ];
 
-    ;
-
-    public function oder()
+    public function order()
     {
-        return $this->belongsTo(Order::class, 'order_id');
+        return $this->belongsTo(Order::class);
     }
+
     public function product()
-    {
-        return $this->belongsTo(Product::class, 'product_id');
-    }
+{
+    return $this->belongsTo(Product::class, 'product_id');
+}
 }

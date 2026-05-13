@@ -18,8 +18,8 @@ function OrderTable({ orders, fetchOrders }) {
     <div className=" admin-car order-section">
       <div className="table-header">
         <div>
-          <h2> QUẢN LÝ ĐƠN HÀNG </h2>
-          <p>THEO DOI TRẠNG THÁI ĐƠN HÀNG</p>
+          <h1 style={{color:"red"}}> QUẢN LÝ ĐƠN HÀNG </h1>
+          <p style={{marginBottom:"30px"}}>THEO DOI TRẠNG THÁI ĐƠN HÀNG</p>
         </div>
       </div>
       <div className="order-table">

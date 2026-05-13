@@ -1,0 +1,306 @@
+/* =========================
+   ADMIN LAYOUT
+========================= */
+
+.admin-site {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.admin-sidebar {
+  width: 270px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 20px;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  height: 100vh;
+}
+
+/* LOGO */
+
+.admin-logo {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-logo h2 {
+  color: #c57b39;
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
+.admin-logo p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-menu a {
+  text-decoration: none;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  transition: 0.3s;
+}
+
+.admin-menu a:hover {
+  background: #f3f4f6;
+}
+
+.admin-menu a.active {
+  background: #c57b39;
+  color: white;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.admin-main {
+  flex: 1;
+  margin-left: 270px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-header {
+  height: 85px;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 35px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-header h2 {
+  color: #111827;
+  font-size: 30px;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: #111827;
+  font-weight: 700;
+}
+
+.admin-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #c57b39;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.admin-footer {
+  margin-top: auto;
+
+  background: white;
+
+  border-top: 1px solid #e5e7eb;
+
+  padding: 18px 30px;
+
+  color: #6b7280;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.admin-page {
+  padding: 35px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.admin-form {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 28px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.admin-form h2 {
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid #d1d5db;
+
+  margin-bottom: 16px;
+
+  outline: none;
+
+  color: #111827;
+}
+
+.admin-form button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #c57b39;
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+
+.order-table {
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.order-header,
+.order-row {
+  display: grid;
+
+  /* 7 cột */
+  grid-template-columns:
+    100px
+    1.2fr
+    180px
+    120px
+    180px
+    220px
+    160px;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 20px 24px;
+}
+
+.order-header {
+  background: #f3f4f6;
+  font-weight: 800;
+  color: #111827;
+}
+
+.order-row {
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+.order-row span,
+.order-header span {
+  display: flex;
+  align-items: center;
+}
+
+.order-row select {
+ 
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  color: white;
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-list {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  border: 1px solid #e5e7eb;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #f3f4f6;
+
+  color: #111827;
+}
