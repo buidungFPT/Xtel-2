@@ -10,27 +10,19 @@ use function PHPUnit\Framework\returnArgument;
 
 class AuthController extends Controller
 {
-    public function registered(Request $request)
+    public function register(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|min:3',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
-        ], [
-            'name.required' => 'Vui lòng nhập tên',
-            'email.required' => 'Vui lòng nhập email',
-            'email.email' => 'Email không đúng định dạng',
-            'email.unique' => 'Email đã tồn tại',
-            'password.required' => 'Vui lòng nhập mật khẩu',
-            'password.min' => 'Mật khẩu phải ít nhất 6 ký tự',
-            'password.confirmed' => 'Xác nhận mật khẩu không khớp',
         ]);
+
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
-            'password' => $validated['password'],
+            'password' => Hash::make($validated['password']),
             'role' => 'user'
-
         ]);
 
         return response()->json([

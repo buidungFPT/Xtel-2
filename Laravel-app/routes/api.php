@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DashboardController;
+use App\Http\Controllers\Api\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,16 +29,25 @@ Route::apiResource('products', ProductController::class);
 
 
 // Auth routes
-Route::post('register', [AuthController::class, 'registered']);
+Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 Route::middleware('auth:sanctum')->get('/admin/dashboard', [DashboardController::class, 'index']);
 Route::middleware('auth:sanctum')->group(function () {
-  
+
     Route::get('/orders', [OrderController::class, 'index']);
+    Route::get('/orders/{id}', [OrderController::class, 'show']);
     Route::post('/orders', [OrderController::class, 'store']);
     Route::get('/my-order', [OrderController::class, 'myOrders']);
-   Route::middleware('auth:sanctum')->put('/orders/{id}', [OrderController::class, 'update']);
+    Route::middleware('auth:sanctum')->put('/orders/{id}', [OrderController::class, 'update']);
+    Route::middleware('auth:sanctum')->patch('/orders/{id}', [OrderController::class, 'update']);
     Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/users', [UserController::class, 'index']);
+    Route::post('/users', [UserController::class, 'store']);
+    Route::put('/users/{id}', [UserController::class, 'update']);
+    Route::delete('/users/{id}', [UserController::class, 'destroy']);
 });

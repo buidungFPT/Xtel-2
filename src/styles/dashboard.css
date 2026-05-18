@@ -58,3 +58,72 @@
   font-weight: 800;
 }
 
+.dashboard-chart {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.dashboard-chart h2 {
+  margin-bottom: 20px;
+  color: #111827;
+}
+.recent-orders-box {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.recent-orders-box h2 {
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.recent-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-orders-table th,
+.recent-orders-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.recent-orders-table th {
+  color: #111827;
+  font-weight: 800;
+}
+
+.recent-orders-table td {
+  color: #374151;
+}
+.best-selling-box {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.best-selling-box h2 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.best-selling-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.best-selling-table th,
+.best-selling-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}

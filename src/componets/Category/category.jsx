@@ -11,12 +11,12 @@
 
 function Category({ category, setCategory, categoriesForm = [] }) {
   return (
-    <select
+    <select style={{marginBottom:"10px"}}
       className="filter-select"
       value={category}
       onChange={(e) => setCategory(e.target.value)}
     >
-      <option value="all">Tất cả</option>
+      <option  value="all">Tất cả</option>
 
       {categoriesForm.map((item) => (
         <option key={item.id} value={item.id}>

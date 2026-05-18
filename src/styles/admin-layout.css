@@ -1,98 +1,12 @@
 /* =========================
-   ADMIN LAYOUT
+   ADMIN LAYOUT - MENU NGANG
 ========================= */
 
 .admin-site {
-  display: flex;
   min-height: 100vh;
-}
-
-/* =========================
-   SIDEBAR
-========================= */
-
-.admin-sidebar {
-  width: 270px;
-  background: #ffffff;
-  border-right: 1px solid #e5e7eb;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 30px 20px;
-
-  position: fixed;
-  left: 0;
-  top: 0;
-
-  height: 100vh;
-}
-
-/* LOGO */
-
-.admin-logo {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.admin-logo h2 {
-  color: #c57b39;
-  font-size: 34px;
-  margin-bottom: 5px;
-}
-
-.admin-logo p {
-  color: #6b7280;
-  font-size: 15px;
-}
-
-/* =========================
-   MENU
-========================= */
-
-.admin-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.admin-menu a {
-  text-decoration: none;
-
+  background: #f8f3ec;
   color: #111827;
-
-  font-size: 17px;
-  font-weight: 600;
-
-  padding: 14px 18px;
-
-  border-radius: 14px;
-
-  transition: 0.3s;
-}
-
-.admin-menu a:hover {
-  background: #f3f4f6;
-}
-
-.admin-menu a.active {
-  background: #c57b39;
-  color: white;
-}
-
-/* =========================
-   MAIN
-========================= */
-
-.admin-main {
-  flex: 1;
-  margin-left: 270px;
-
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* =========================
@@ -100,62 +14,129 @@
 ========================= */
 
 .admin-header {
-  height: 85px;
-  background: white;
+  width: 100%;
+  height: 92px;
+  background: #ffffff;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 35px;
+  padding: 0 42px;
 
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #eadfd2;
+  box-shadow: 0 4px 20px rgba(70, 41, 20, 0.06);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.admin-header h2 {
-  color: #111827;
-  font-size: 30px;
+/* =========================
+   LOGO
+========================= */
+
+.admin-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 180px;
 }
+
+.admin-logo h2 {
+  color: #b76f2b;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.admin-logo p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* =========================
+   MENU NGANG
+========================= */
+
+.admin-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.admin-menu a {
+  text-decoration: none;
+  color: #1f2937;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  padding: 13px 17px;
+  border-radius: 999px;
+
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.admin-menu a:hover {
+  background: #f8eee3;
+  color: #b76f2b;
+  transform: translateY(-2px);
+}
+
+.admin-menu a.active {
+  background: linear-gradient(135deg, #c97d35, #a85f22);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(185, 112, 43, 0.28);
+}
+
+/* =========================
+   PROFILE
+========================= */
 
 .admin-profile {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
+
+  min-width: 130px;
+  justify-content: flex-end;
 
   color: #111827;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 17px;
 }
 
 .admin-avatar {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
 
   border-radius: 50%;
 
-  background: #c57b39;
+  background: linear-gradient(135deg, #c97d35, #a85f22);
   color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 /* =========================
-   FOOTER
+   MAIN
 ========================= */
 
-.admin-footer {
-  margin-top: auto;
+.admin-main {
+  width: 100%;
+  min-height: calc(100vh - 92px);
 
-  background: white;
-
-  border-top: 1px solid #e5e7eb;
-
-  padding: 18px 30px;
-
-  color: #6b7280;
+  display: flex;
+  flex-direction: column;
 }
 
 /* =========================
@@ -163,7 +144,148 @@
 ========================= */
 
 .admin-page {
-  padding: 35px;
+  padding: 38px 46px;
+}
+
+.order-section {
+  background: #fffaf3;
+  border-radius: 30px;
+  padding: 34px;
+  box-shadow: 0 20px 45px rgba(70, 41, 20, 0.08);
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.table-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.table-header h1 {
+  color: #ef1212 !important;
+  font-size: 52px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.table-header p {
+  color: #1f2937;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/* =========================
+   ORDER TABLE
+========================= */
+
+.order-table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #eee1d4;
+  box-shadow: 0 16px 36px rgba(70, 41, 20, 0.1);
+}
+
+.order-header,
+.order-row {
+  display: grid;
+  grid-template-columns:
+    90px
+    1.2fr
+    1.1fr
+    0.8fr
+    1.1fr
+    1.3fr
+    1fr
+    1.2fr;
+
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px 28px;
+}
+
+.order-header {
+  background: #f3f4f6;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.order-row {
+  min-height: 92px;
+  border-top: 1px solid #eee;
+  color: #111827;
+  font-size: 17px;
+  transition: 0.25s ease;
+}
+
+.order-row:hover {
+  background: #fff7ed;
+}
+
+.order-row span,
+.order-header span {
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+/* =========================
+   SELECT STATUS
+========================= */
+
+.order-row select {
+  width: 155px;
+  padding: 12px 15px;
+
+  border-radius: 14px;
+  border: none;
+  outline: none;
+
+  font-weight: 900;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   PAYMENT STATUS
+========================= */
+
+.payment-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 145px;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.payment-status.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.payment-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.payment-status.failed {
+  background: #fee2e2;
+  color: #991b1b;
 }
 
 /* =========================
@@ -172,11 +294,8 @@
 
 .admin-form {
   background: white;
-
   border-radius: 24px;
-
   padding: 28px;
-
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
@@ -189,18 +308,23 @@
 .admin-form select,
 .admin-form textarea {
   width: 100%;
-
   padding: 14px 16px;
 
   border-radius: 14px;
-
   border: 1px solid #d1d5db;
 
   margin-bottom: 16px;
-
   outline: none;
 
   color: #111827;
+  background: white;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+  border-color: #c57b39;
+  box-shadow: 0 0 0 4px rgba(197, 123, 57, 0.15);
 }
 
 .admin-form button {
@@ -208,75 +332,13 @@
   padding: 14px;
 
   border: none;
-
   border-radius: 14px;
 
   background: #c57b39;
   color: white;
 
-  font-weight: 700;
-
-  cursor: pointer;
-}
-
-/* =========================
-   TABLE
-========================= */
-
-
-.order-table {
-  width: 100%;
-  background: white;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
-}
-
-.order-header,
-.order-row {
-  display: grid;
-
-  /* 7 cột */
-  grid-template-columns:
-    100px
-    1.2fr
-    180px
-    120px
-    180px
-    220px
-    160px;
-
-  align-items: center;
-
-  gap: 20px;
-
-  padding: 20px 24px;
-}
-
-.order-header {
-  background: #f3f4f6;
   font-weight: 800;
-  color: #111827;
-}
-
-.order-row {
-  border-top: 1px solid #e5e7eb;
-  color: #111827;
-}
-
-.order-row span,
-.order-header span {
-  display: flex;
-  align-items: center;
-}
-
-.order-row select {
- 
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: none;
-  font-weight: 700;
-  color: white;
+  cursor: pointer;
 }
 
 /* =========================
@@ -285,11 +347,8 @@
 
 .category-list {
   background: white;
-
   border-radius: 24px;
-
   padding: 24px;
-
   border: 1px solid #e5e7eb;
 }
 
@@ -299,8 +358,153 @@
   align-items: center;
 
   padding: 14px 0;
-
   border-bottom: 1px solid #f3f4f6;
 
   color: #111827;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.admin-footer {
+  margin-top: auto;
+  background: white;
+  border-top: 1px solid #eadfd2;
+
+  padding: 18px 30px;
+
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .admin-header {
+    height: auto;
+    padding: 22px;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .admin-logo,
+  .admin-profile {
+    min-width: auto;
+  }
+
+  .admin-menu {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .order-table {
+    overflow-x: auto;
+  }
+
+  .order-header,
+  .order-row {
+    min-width: 1150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 24px 16px;
+  }
+
+  .order-section {
+    padding: 22px 14px;
+    border-radius: 22px;
+  }
+
+  .table-header h1 {
+    font-size: 34px;
+  }
+
+  .table-header p {
+    font-size: 16px;
+  }
+
+  .admin-header {
+    padding: 18px;
+  }
+
+  .admin-logo h2 {
+    font-size: 28px;
+  }
+
+  .admin-profile {
+    font-size: 15px;
+  }
+
+  .admin-avatar {
+    width: 42px;
+    height: 42px;
+  }
+}
+/* =========================
+   ORDER STATUS
+========================= */
+
+.status-select {
+  width: 160px;
+
+  padding: 12px 14px;
+
+  border: none;
+  border-radius: 14px;
+
+  color: white;
+
+  font-weight: 800;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.status-select:hover {
+  transform: translateY(-2px);
+}
+
+/* STATUS COLORS */
+
+.status-pending {
+  background: #f59e0b;
+}
+
+.status-processing {
+  background: #3b82f6;
+}
+
+.status-shipping {
+  background: #8b5cf6;
+}
+
+.status-completed {
+  background: #22c55e;
+}
+
+.status-cancelled {
+  background: #ef4444;
+}
+
+/* =========================
+   ORDER EXTRA
+========================= */
+
+.customer-name {
+  font-weight: 700;
+}
+
+.order-price {
+  color: #b76f2b;
+  font-weight: 800;
 }

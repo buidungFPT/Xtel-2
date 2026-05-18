@@ -1,15 +1,18 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 function AdminLayout() {
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
     <main className="admin-site">
       <aside className="admin-sidebar">
         <div className="admin-logo">
-          <h2>ChunChun</h2>
-          <p>Coffee Admin</p>
+          <h2 style={{ marginTop: "20px", marginBottom: "40px" }}>
+            ChunChun Coffee Admin
+          </h2>
         </div>
 
-        <nav className="admin-menu">
+        <nav className="admin-menu" style={{ marginBottom: "30px"}}>
           <NavLink to="/admin" end>
             📊 Dashboard
           </NavLink>
@@ -34,7 +37,7 @@ function AdminLayout() {
             ⚙️ Cài đặt
           </NavLink>
 
-          <NavLink to="/user">
+          <NavLink to="/login">
             🚪 Đăng xuất
           </NavLink>
         </nav>
@@ -42,11 +45,21 @@ function AdminLayout() {
 
       <section className="admin-main">
         <header className="admin-header">
-          <h2>ChunChun Admin</h2>
+          <h2 style={{ color: "black" }}>ChunChun Admin</h2>
 
           <div className="admin-profile">
-            <strong>Admin</strong>
-            <div className="admin-avatar">A</div>
+            <div
+              style={{
+                color: "#c57b39",
+                fontWeight: "700",
+              }}
+            >
+              {user?.email || "Chưa đăng nhập"}
+            </div>
+
+            <div className="admin-avatar">
+              {user?.name?.charAt(0).toUpperCase() || "A"}
+            </div>
           </div>
         </header>
 

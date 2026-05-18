@@ -5,6 +5,7 @@ function CheckoutForm({ cart, onSubmitOrder }) {
     customer_name: "",
     phone: "",
     address: "",
+     payment_method: "cod",
   });
 
   const handleSubmit = (e) => {
@@ -67,10 +68,63 @@ function CheckoutForm({ cart, onSubmitOrder }) {
           })
         }
       />
+<div className="payment-methods">
 
-      <button type="submit" className="btn-primary">
-        Xác nhận đặt hàng
-      </button>
+  <button
+    type="button"
+    className={
+      customer.payment_method === "cod"
+        ? "payment-btn active"
+        : "payment-btn"
+    }
+    onClick={() =>
+      setCustomer({
+        ...customer,
+        payment_method: "cod",
+      })
+    }
+  >
+    💵 Tiền mặt
+  </button>
+
+  <button
+    type="button"
+    value="banking"
+    className={
+      customer.payment_method === "bank"
+        ? "payment-btn active"
+        : "payment-btn"
+    }
+    onClick={() =>
+      setCustomer({
+        ...customer,
+        payment_method: "bank",
+      })
+    }
+  >
+    🏦 Chuyển khoản
+  </button>
+
+</div>
+
+{customer.payment_method === "bank" && (
+  <div className="bank-info-box">
+
+    <h3>Thông tin chuyển khoản</h3>
+
+    <p>Ngân hàng: MB Bank</p>
+
+    <p>Số tài khoản: 0123456789</p>
+
+    <p>Chủ tài khoản: CHUNCHUN COFFEE</p>
+
+    <p>Nội dung: Thanh toán đơn hàng</p>
+
+  </div>
+)}
+    <button type="submit" className="checkout-btn">
+  Xác nhận đặt hàng
+</button>
     </form>
   );
 }

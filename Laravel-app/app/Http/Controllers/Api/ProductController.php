@@ -37,7 +37,7 @@ class ProductController extends Controller
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
         $imagePath = null;
-        if ($request->hasFile('iamge')){
+        if ($request->hasFile('image')){
             $imagePath=$request
             ->file('image')->store('producs','public');
         }
